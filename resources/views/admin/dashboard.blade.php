@@ -2,12 +2,13 @@
     <x-slot name="header">
         <center>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Dashboard User') }}
+                {{ __('Dashboard Admin') }}
             </h2>
         </center>
-        <div>
-            <a href="{{ route('user.ticket') }}">See Ticket</a>
+        <div class="d-flex gap-2">
+            <a href="{{ route('admin.ticket.index') }}" class="btn btn-primary">See Ticket</a>
         </div>
+
     </x-slot>
 
     <div class="py-12">

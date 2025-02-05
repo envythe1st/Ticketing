@@ -16,6 +16,13 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="flex justify-center mt-2">
+                    <form method="GET" action="{{ route('user.ticket') }}" class="flex gap-2">
+                        <input type="text" name="search" placeholder="Search by ID, Group, Category, Status..."
+                            class="form-input" value="{{ request()->get('search') }}">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
                 <table class="table-auto w-full text-sm">
                     <thead>
                         <tr>

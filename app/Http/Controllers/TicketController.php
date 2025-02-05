@@ -11,9 +11,27 @@ use Illuminate\Support\Facades\Auth;
 class TicketController extends Controller
 {
     //HOME
-    public function index()
+    public function index(Request $request)
     {
-        $tickets = Ticket::with(['category', 'handledBy'])->get();
+        $query = Ticket::with(['category', 'handledBy']);
+
+        //SEARCH
+        $search = $request->get('search');
+
+        if ($search) {
+            $query->where(function ($q) use ($search) {
+                $q->where('id', 'like', "%{$search}%")
+                    ->orWhere('group_name', 'like', "%{$search}%")
+                    ->orWhereHas('category', function ($q) use ($search) {
+                        $q->where('category_name', 'like', "%{$search}%");
+                    })
+                    ->orWhere('status', 'like', "%{$search}%")
+                    ->orWhere('details', 'like', "%{$search}%")
+                    ->orWhere('sender', 'like', "%{$search}%");
+            });
+        }
+
+        $tickets = $query->get();
 
         if (Auth::user()->m_role == 'admin') {
             return view('admin.ticket.home', compact('tickets'));
@@ -48,6 +66,8 @@ class TicketController extends Controller
         return redirect()->route('admin.ticket.create')->with('success', 'Ticket created successfully.');
     }
 
+
+
     //EDIT OR UPDATE
     public function edit($id)
     {
@@ -80,6 +100,8 @@ class TicketController extends Controller
 
         return redirect()->route('admin.ticket.edit', $id)->with('success', 'Ticket updated successfully!');
     }
+
+
 
     //SOFT DELETE
     public function delete($id)

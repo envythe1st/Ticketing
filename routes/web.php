@@ -1,20 +1,27 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+//CONTROLLER
+use App\Http\Controllers\SettingController;
+
 use Illuminate\Support\Facades\Route;
 
+//GUEST
 Route::get('/', function () {
     return view('welcome');
 });
 
+//USER ROUTE
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+//ADMIN ROUTE
+
+//SETTING
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/setting', [SettingController::class, 'edit'])->name('setting.edit');
+    Route::patch('/setting', [SettingController::class, 'update'])->name('setting.update');
+    Route::delete('/setting', [SettingController::class, 'destroy'])->name('setting.destroy');
 });
 
 require __DIR__.'/auth.php';

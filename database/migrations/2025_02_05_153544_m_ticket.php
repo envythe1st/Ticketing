@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('m_category')->onDelete('cascade');
-            $table->foreign('handled_by')->references('id')->on('users')->onDelete('set null');
+            $table->foreign('handled_by')->references('id')->on('m_user')->onDelete('set null');
         });
     }
 

@@ -43,7 +43,7 @@ php artisan migrate
 ![Tampilan Dashboard](public/image/dashboard.png)
 
 ### 🎟️ Tampilan Ticketing
-![Tampilan Ticketing](public/image/ticketing.png)
+![Tampilan Ticketing](public/image/Ticketing.png)
 
 ### ➕ Tampilan Create Ticket
 ![Tampilan Create Ticket](public/image/create_ticket.png)

@@ -27,6 +27,7 @@ Berikut merupakan projek ticketing berbasis laravel 11 dan brezze
 - Lakukan "php artisan migrate" 
 
 ## Tampilan Web
-- ![login](images/login.png)
+- Tampilan Login
+<img src="public/image/login.png" alt="Tampilan Login">
 
 

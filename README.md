@@ -52,6 +52,6 @@ Berikut merupakan projek ticketing berbasis laravel 11 dan brezze
 <img src="public/image/edit_profile.png" alt="Tampilan Edit Profile">
 
 - Tampilan Setting
-<img src="public/image/setting.png" alt="Tampilan Setting">
+<img src="public/image/setting.png" alt="Tampilan Setting   ">
 
 

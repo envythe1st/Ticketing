@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\Route;
 
 //GUEST
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
+
 
 
 //USER ROUTE

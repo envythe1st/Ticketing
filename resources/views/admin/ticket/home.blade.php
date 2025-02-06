@@ -94,14 +94,12 @@
         const deleteForms = document.querySelectorAll('form[id^="delete-ticket-form-"]');
         deleteForms.forEach(form => {
             form.addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent normal form submission
+                e.preventDefault();
 
-                const ticketId = this.id.split('-')[3]; // Get the ticket ID from form ID
+                const ticketId = this.id.split('-')[3];
 
-                // Remove ticket row from the view
                 document.getElementById(`ticket-${ticketId}`).remove();
 
-                // Send request to delete ticket from the server
                 fetch(this.action, {
                         method: 'DELETE',
                         headers: {
@@ -115,7 +113,6 @@
                     })
                     .then(response => response.json())
                     .then(data => {
-                        // Handle response after the ticket is deleted
                         if (data.success) {
                             alert('Ticket deleted successfully.');
                         } else {

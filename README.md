@@ -1,57 +1,63 @@
-# Ticketing Projeck (Laravel 11 & Brezze)
+# 🎟️ Ticketing Project (Laravel 11 & Breeze)
 
+## 📌 Pendahuluan
+Proyek ini merupakan sistem ticketing berbasis Laravel 11 dengan autentikasi menggunakan Breeze.
 
-## Pendahuluan
-Berikut merupakan projek ticketing berbasis laravel 11 dan brezze
+## ✨ Fitur
+- 🔐 Sistem Login & Register
+- 👥 Role Admin & User
+- 🎫 Sistem Ticket dengan CRUD
+- 👤 Menu Profile
+- 🚪 Logout
 
-## Fitur
--   Sistem Login & Register
--   Admin & User
--   Sistem Ticket Dan CRUD
--   Menu Profile
--   Logout
+## ⚙️ Persyaratan
+- 🖥️ PHP 8.2 atau lebih
+- 🎼 Composer
+- 🌍 Node.js & NPM
+- 🛢️ MySQL/PostgreSQL
+- 🖥️ GitBash
 
-## Persyaratan
--   PHP 8.2 Atau lebih
--   Composer
--   Node.js & NPM
--   MySQL/PostgreSQL
--   GitBash 
+## 📥 Instalasi
+```bash
+git clone https://github.com/envythe1st/Ticketing.git
+cd Ticketing
+npm install && npm run dev
+```
 
-## Instalasi 
-- git clone https://github.com/envythe1st/Ticketing.git
-- npm install && npm run dev
+## 🔧 Konfigurasi
+1. Ubah file `.env` sesuai dengan pengaturan Anda.
+2. Jalankan perintah berikut untuk migrasi database:
+```bash
+php artisan migrate
+```
 
-## konfigurasi
-- ubah .env dengan settingan mu
-- Lakukan "php artisan migrate" 
+## 🎨 Tampilan Web
 
-## Tampilan Web
-- Tampilan Login
-<img src="public/image/login.png" alt="Tampilan Login">
+### 🔑 Tampilan Login
+![Tampilan Login](public/image/login.png)
 
-- Tampilan Register
-<img src="public/image/register.png" alt="Tampilan Register">
+### 📝 Tampilan Register
+![Tampilan Register](public/image/register.png)
 
-- Tampilan Dashboard
-<img src="public/image/dashboard.png" alt="Tampilan Dashboard">
+### 🏠 Tampilan Dashboard
+![Tampilan Dashboard](public/image/dashboard.png)
 
-- Tampilan Ticketing
-<img src="public/image/ticketing.png" alt="Tampilan Ticketing">
+### 🎟️ Tampilan Ticketing
+![Tampilan Ticketing](public/image/ticketing.png)
 
-- Tampilan Create Ticket
-<img src="public/image/create_ticket.png" alt="Tampilan Create Ticket">
+### ➕ Tampilan Create Ticket
+![Tampilan Create Ticket](public/image/create_ticket.png)
 
-- Tampilan Edit Ticket
-<img src="public/image/edit_ticket.png" alt="Tampilan Edit Ticket">
+### ✏️ Tampilan Edit Ticket
+![Tampilan Edit Ticket](public/image/edit_ticket.png)
 
-- Tampilan Profile
-<img src="public/image/profie.png" alt="Tampilan Profile">
+### 👤 Tampilan Profile
+![Tampilan Profile](public/image/profile.png)
 
-- Tampilan Edit Profile
-<img src="public/image/edit_profile.png" alt="Tampilan Edit Profile">
+### 🖊️ Tampilan Edit Profile
+![Tampilan Edit Profile](public/image/edit_profile.png)
 
-- Tampilan Setting
-<img src="public/image/setting.png" alt="Tampilan Setting   ">
+### ⚙️ Tampilan Setting
+![Tampilan Setting](public/image/setting.png)
 
 

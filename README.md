@@ -31,7 +31,8 @@ npm install && npm run dev
 
 ## 🔧 Konfigurasi
 
-1. Ubah file `.env` sesuai dengan pengaturan Anda, Contoh:
+1. Ubah file `.env` sesuai dengan pengaturan Anda, 
+   - Contoh:
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306

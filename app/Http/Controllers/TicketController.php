@@ -57,7 +57,7 @@ class TicketController extends Controller
             'category_id' => 'nullable|exists:m_category,id',
             'status' => 'required|string|max:50',
             'details' => 'required|string',
-            'handled_by' => 'nullable|exists:users,id',
+            'handled_by' => 'nullable|exists:m_user,id',
             'sender' => 'required|string|max:200',
         ]);
 
@@ -84,7 +84,7 @@ class TicketController extends Controller
             'category_id' => 'nullable|exists:m_category,id',
             'status' => 'required|string|max:50',
             'details' => 'required|string',
-            'handled_by' => 'nullable|exists:users,id',
+            'handled_by' => 'nullable|exists:m_user,id',
             'sender' => 'required|string|max:200',
         ]);
 
